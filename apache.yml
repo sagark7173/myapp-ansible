@@ -10,7 +10,7 @@
   service:
     - name: "httpd"
       state: started
-	enabled: yes
+      enabled: yes
     register: restart
    - debug:
       var: restart.stdout
