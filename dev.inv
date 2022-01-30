@@ -1,2 +1,2 @@
 [webservers]
-169.254.43.116 ansible_user=s2058316
+169.254.43.116 ansible_user=root
