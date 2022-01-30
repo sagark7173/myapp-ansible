@@ -1,13 +1,17 @@
----
-- hosts: webservers 
-  become: True
-  tasks:
-    - name: Deploy static website
-      copy:
-        src: index.html
-        dest: /var/www/html/
-    - name: restart service
-  service:
-    - name: "httpd"
+--- 
+- 
+  become: true
+  hosts: webservers
+  service: 
+    - 
+      enabled: true
+      name: httpd
       state: started
-      enabled: yes
+  tasks: 
+    - 
+      copy: 
+        dest: /var/www/html/
+        src: index.html
+      name: "Deploy static website"
+    - 
+      name: "restart service"
