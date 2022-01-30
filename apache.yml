@@ -7,9 +7,9 @@
         src: index.html
         dest: /var/www/html/
     - name: restart service
-    service:
-	  name: "httpd"
-	  state: restarted
+  service:
+    - name: "httpd"
+	  state: started
 	  enabled: yes
     register: restart
    - debug:
